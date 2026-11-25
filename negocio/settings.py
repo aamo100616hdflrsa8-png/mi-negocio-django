@@ -1,3 +1,14 @@
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']  # Carpeta donde guardarás tu styles.css
+STATIC_ROOT = BASE_DIR / 'staticfiles'    # Carpeta donde Render recopila todo
+
+# Si usas WhiteNoise (recomendado para Render):
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 """
 Django settings for negocio project.
 
@@ -134,3 +145,6 @@ STORAGES = {
     },
 }
 LOGIN_URL = 'login'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'staticfiles'

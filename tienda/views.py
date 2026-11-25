@@ -34,6 +34,8 @@ def crear_categoria(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Categoría creada correctamente.')
+            messages.success(request, "Operación realizada con éxito.")
+
             return redirect('lista_categorias')
     else:
         form = CategoriaForm()
