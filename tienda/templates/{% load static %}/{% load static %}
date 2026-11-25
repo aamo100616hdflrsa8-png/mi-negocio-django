@@ -1,7 +1,0 @@
-{% empty %}
-<tr>
-  <td colspan="4" style="text-align: center; padding: 2rem;">
-    No hay registros aún. <a href="{% url 'crear_item' %}">Crea el primero aquí</a>.
-  </td>
-</tr>
-{% endfor %}
